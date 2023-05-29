@@ -32,9 +32,9 @@ function addList(row){
         newEl.id = ID;
         newEl.style.backgroundColor  = color
         let LocationInDB = ref(database,`shoopingList/${ID}`);
-        newEl.addEventListener("dblclick",function(){  
-            remove(LocationInDB)
-        });
+       // newEl.addEventListener("dblclick",function(){  
+         //   remove(LocationInDB)
+       // });
        
         newEl.addEventListener("click",function(){
             debugger;
