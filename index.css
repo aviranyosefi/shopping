@@ -3,6 +3,7 @@ html,body{
     padding: 0;
     background-color: #EEF0F4;
     user-select: none;
+    direction: rtl;
 }
 .container{
     display:flex;
@@ -30,7 +31,15 @@ button{
     font-size: 20px;
     text-align: center;
 }
-
+.a {
+  text-decoration: none;
+  color: #fff; 
+  background: #e117f3;
+  padding: 5px 16px;
+  display: inline-block;
+  border-radius: 3px;
+  width: 25%;
+ }
 ul{
     list-style-type: none;
     padding: 0;
@@ -48,7 +57,33 @@ ul li {
     flex-grow: 1;
     text-align: center;
     font-size: 20px;
+    position: relative;
+    -webkit-tap-highlight-color:red;
+    -webkit-touch-callout: none; /* Disable callout */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Standard syntax */
+
+
+ 
+
 }
+li::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: transparent;
+  z-index: 9999;
+  pointer-events: none;
+}
+</style>
+</head>
+
 .li-green{
     background-color: green;
     color: white;
@@ -57,3 +92,106 @@ ul li {
     background-color: white;
     color: black;
 }
+#categoryFilter{
+    color: gray;
+    background-color: #DCE1EB;
+    border: 0;
+    padding: 15px;
+    border-radius: 8px;
+    font-size: 20px;
+    text-align: center;
+    margin: 10px 0;
+}
+.delete{
+    
+    color: white;
+    background-color: red;
+    border: 0;
+    padding-left: 50px;
+    padding: 0px;
+    border-radius: 8px;
+    font-size: 20px;
+    text-align: center;
+}
+
+input[type="checkbox"] {
+    display: none;
+  }
+.bread,
+.note:has(.bread) {
+  --tagColor: #0cee72;
+}
+.other,
+.note:has(.other) {
+  --tagColor: #fcdbcf;
+}
+.fruits,
+.note:has(.fruits) {
+  --tagColor: #ccdcff;
+}
+.milk,
+.note:has(.milk) {
+  --tagColor: #f9cafc;
+}
+.veg,
+.note:has(.veg) {
+  --tagColor: #5c6cca;
+}
+.meat,
+.note:has(.veg) {
+  --tagColor: #d65012;
+}
+.clean,
+.note:has(.clean) {
+  --tagColor: #5c6cca;
+}
+
+.bread,
+.other,
+.fruits,
+.milk,
+.veg,
+.meat,
+.clean {
+  background-color: var(--tagColor);
+}
+#bread-box:checked + label div,
+#other-box:checked + label div,
+#fruits-box:checked + label div,
+#milk-box:checked + label div,
+#veg-box:checked + label div,
+#meat-box:checked + label div,
+#clean-box:checked + label div  {
+  background-color: var(--tagColor);
+  color: unset;
+}
+#bread-box + label div,
+#other-box + label div,
+#fruits-box + label div,
+#milk-box + label div,
+#veg-box + label div,
+#meat-box + label div,
+#clean-box + label div {
+  background-color: white;
+  border: 1px solid var(--tagColor);
+  color: var(--tagColor);
+}
+.tag {
+    padding: 6px 12px;
+    width: fit-content;
+    border-radius: 9999px;
+    margin-top: 12px;
+    user-select: none;
+  }
+  .checkboxs{
+    display:flex;
+    flex-wrap: wrap;
+    
+  }
+  .hidden {
+    display: none;
+  }
+  .show {
+    display:block;
+  }
+
