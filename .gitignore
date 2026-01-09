@@ -1,0 +1,13 @@
+# Firebase configuration - contains sensitive data
+config.js
+
+# Node modules
+node_modules/
+
+# Environment variables
+.env
+.env.local
+
+# OS files
+.DS_Store
+Thumbs.db
